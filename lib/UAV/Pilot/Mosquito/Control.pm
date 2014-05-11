@@ -21,23 +21,30 @@
 # CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
 # POSSIBILITY OF SUCH DAMAGE.
-package UAV::Pilot::Mosquito;
+package UAV::Pilot::Mosquito::Control;
 use v5.14;
 use warnings;
 use Moose;
 use namespace::autoclean;
 
+with 'UAV::Pilot::ControlHelicopter';
+with 'UAV::Pilot::Logger';
 
-# ABSTRACT: Control small 2.4GHz UAVs
+
+sub takeoff
+{
+    # TODO
+}
 
 
 no Moose;
 __PACKAGE__->meta->make_immutable;
 1;
+__END__
 
 
 =head1 NAME
 
-  UAV::Pilot::Mosquito - Control small 2.4GHz UAVs
+  UAV::Pilot::Mosquito::Control
 
 =cut
